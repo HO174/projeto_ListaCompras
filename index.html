@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <h2>Shopping List</h2>
+    
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+    
+        <label for="school">School:</label><br>
+        <input type="text" id="school" name="school"><br>
+    
+        <h3>Categories:</h3>
+        <ul>
+            <li>Product</li>
+            <li>Cleaning Material</li>
+            <li>Other</li>
+        </ul>
+    
+        <h3>List:</h3>
+        <table id="shoppingList">
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="item1"></td>
+                <td>
+                    <select name="category1">
+                        <option value="product">Product</option>
+                        <option value="cleaning_material">Cleaning Material</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+                <td><input type="number" name="quantity1"></td>
+            </tr>
+        </table>
+    
+        <h3>Buttons:</h3>
+        <button type="button" id="addButton"><i class="fas fa-plus">+</i></button>
+        <button type="button" id="removeButton"><i class="fas fa-minus">deletar</i></button>
+        <button type="submit" id="sendButton"><i class="fas fa-paper-plane">enviar</i></button>
+    </form>
+    
+    <script src="scripts.js"></script>
+    
+    </body>
+
+</html>
