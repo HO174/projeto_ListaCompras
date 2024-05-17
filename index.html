@@ -1,58 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORMULARIO</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   
+    <form id="form">
+        <h1>PEDIDOS</h1>
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        
+            <label for="escola">Escola:</label>
+            <select id="escola" name="escola" required>
+                <option value="" disabled selected>Selecione uma escola</option>
+                <option value="escola1">Escola 1</option>
+                <option value="escola2">Escola 2</option>
+                <option value="escola3">Escola 3</option>
+            </select>
+        </fieldset>
 
-    <h2>Shopping List</h2>
-    
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-    
-        <label for="school">School:</label><br>
-        <input type="text" id="school" name="school"><br>
-    
-        <h3>Categories:</h3>
-        <ul>
-            <li>Product</li>
-            <li>Cleaning Material</li>
-            <li>Other</li>
-        </ul>
-    
-        <h3>List:</h3>
-        <table id="shoppingList">
-            <tr>
-                <th>Item</th>
-                <th>Category</th>
-                <th>Quantity</th>
-            </tr>
-            <tr>
-                <td><input type="text" name="item1"></td>
-                <td>
-                    <select name="category1">
-                        <option value="product">Product</option>
-                        <option value="cleaning_material">Cleaning Material</option>
-                        <option value="other">Other</option>
-                    </select>
-                </td>
-                <td><input type="number" name="quantity1"></td>
-            </tr>
-        </table>
-    
-        <h3>Buttons:</h3>
-        <button type="button" id="addButton"><i class="fas fa-plus">+</i></button>
-        <button type="button" id="removeButton"><i class="fas fa-minus">deletar</i></button>
-        <button type="submit" id="sendButton"><i class="fas fa-paper-plane">enviar</i></button>
+        <fieldset>
+            <legend>Produtos</legend>
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Selecionar</th>
+                        <th>Item</th>
+                        <th>Quantidade</th>
+                        <th>Produto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="select-item"></td>
+                        <td>1</td>
+                        <td><input type="number" name="quantidade" min="1" required></td>
+                        <td><input type="text" name="produto" required></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" id="adicionarProduto">Adicionar produto</button>
+            <button type="button" id="deletar">Deletar</button>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
     </form>
-    
-    <script src="scripts.js"></script>
-    
-    </body>
 
+    <script src="script.js"></script>
+</body>
 </html>
